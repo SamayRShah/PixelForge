@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sandbox", "Sandbox\Sandbox.vcxproj", "{1EA48FC3-6A2B-40A2-AD2D-61F14BDF34A5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PixelForge	", "PixelForge\PixelForge.vcxproj", "{CFD3C1B1-211D-4D95-B28F-5BC94595C5D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFD3C1B1-211D-4D95-B28F-5BC94595C5D7}.Debug|x64.ActiveCfg = Debug|x64
+		{CFD3C1B1-211D-4D95-B28F-5BC94595C5D7}.Debug|x64.Build.0 = Debug|x64
+		{CFD3C1B1-211D-4D95-B28F-5BC94595C5D7}.Release|x64.ActiveCfg = Release|x64
+		{CFD3C1B1-211D-4D95-B28F-5BC94595C5D7}.Release|x64.Build.0 = Release|x64
+		{1EA48FC3-6A2B-40A2-AD2D-61F14BDF34A5}.Debug|x64.ActiveCfg = Debug|x64
+		{1EA48FC3-6A2B-40A2-AD2D-61F14BDF34A5}.Debug|x64.Build.0 = Debug|x64
+		{1EA48FC3-6A2B-40A2-AD2D-61F14BDF34A5}.Release|x64.ActiveCfg = Release|x64
+		{1EA48FC3-6A2B-40A2-AD2D-61F14BDF34A5}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5D954800-8619-4819-850E-449EF96EA60E}
+	EndGlobalSection
+EndGlobal
