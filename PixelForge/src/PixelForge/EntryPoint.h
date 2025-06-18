@@ -5,7 +5,10 @@
 extern PixelForge::Application* PixelForge::CreateApplication();
 
 int main(int argc, char** argv) {
-	printf("Starting engine");
+	PixelForge::Log::Init();
+	PF_CORE_WARN("Initialized log!");
+	PF_INFO("Hello!");
+
 	auto app = PixelForge::CreateApplication();
 	app->Run();
 	delete app;

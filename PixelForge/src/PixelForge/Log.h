@@ -1,0 +1,30 @@
+#pragma once
+#include "Core.h"
+#include "spdlog/spdlog.h"
+#include <spdlog/sinks/stdout_color_sinks.h>
+#include <memory> 
+
+namespace PixelForge {
+	class PF_API Log
+	{
+	public:
+		static void Init();
+		inline static std::shared_ptr<spdlog::logger>& GetCoreLogger() { return s_CoreLogger; }
+		inline static std::shared_ptr<spdlog::logger>& GetClientLogger() { return s_ClientLogger; }
+	private:
+		static std::shared_ptr<spdlog::logger> s_CoreLogger;
+		static std::shared_ptr<spdlog::logger> s_ClientLogger;
+	};
+}
+
+#define PF_CORE_TRACE(...)  ::PixelForge::Log::GetCoreLogger()->trace(__VA_ARGS__)
+#define PF_CORE_INFO(...)   ::PixelForge::Log::GetCoreLogger()->info(__VA_ARGS__)
+#define PF_CORE_ERROR(...)	::PixelForge::Log::GetCoreLogger()->error(__VA_ARGS__)
+#define PF_CORE_WARN(...)	::PixelForge::Log::GetCoreLogger()->warn(__VA_ARGS__)
+#define PF_CORE_FATAL(...)	::PixelForge::Log::GetCoreLogger()->fatal(__VA_ARGS__)
+
+#define PF_TRACE(...) ::PixelForge::Log::GetClientLogger()->trace(__VA_ARGS__)
+#define PF_INFO(...)	 ::PixelForge::Log::GetClientLogger()->info(__VA_ARGS__)
+#define PF_ERROR(...) ::PixelForge::Log::GetClientLogger()->error(__VA_ARGS__)
+#define PF_WARN(...)  ::PixelForge::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define PF_FATAL(...) ::PixelForge::Log::GetClientLogger()->fatal(__VA_ARGS__)
