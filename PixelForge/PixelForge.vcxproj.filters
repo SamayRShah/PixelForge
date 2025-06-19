@@ -4,6 +4,9 @@
     <Filter Include="PixelForge">
       <UniqueIdentifier>{7AFCB95E-66B4-FBAB-CFBB-D407BB92969C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="PixelForge\Events">
+      <UniqueIdentifier>{1E9BFBA4-8AB1-F93A-D328-855C3F7ECAC2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\PixelForge.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\PixelForge\EntryPoint.h">
       <Filter>PixelForge</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PixelForge\Events\ApplicationEvent.h">
+      <Filter>PixelForge\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PixelForge\Events\Event.h">
+      <Filter>PixelForge\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PixelForge\Events\KeyEvent.h">
+      <Filter>PixelForge\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PixelForge\Events\MouseEvent.h">
+      <Filter>PixelForge\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\PixelForge\Log.h">
       <Filter>PixelForge</Filter>

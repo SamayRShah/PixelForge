@@ -19,17 +19,18 @@ project "PixelForge"
 
 	files {
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/src/**.cpp"
 	}
 
 	includedirs {
-		"PixelForge/vendor/spdlog/include"
+		"PixelForge/vendor/spdlog/include",
+		"%{prj.name}/src"
 	}
 
 	filter "system:windows"
 		cppdialect "C++17"
 		staticruntime "On"
-		systemversion "10.0.26100.0"
+		systemversion "latest"
 
 		buildoptions { "/utf-8" }
 
@@ -64,7 +65,7 @@ project "Sandbox"
 
 	files {
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/src/**.cpp"
 	}
 
 	includedirs {
@@ -79,7 +80,7 @@ project "Sandbox"
 	filter "system:windows"
 		cppdialect "Default"
 		staticruntime "On"
-		systemversion "10.0"
+		systemversion "latest"
 
 		buildoptions { "/utf-8" }
 

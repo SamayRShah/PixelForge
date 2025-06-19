@@ -8,4 +8,6 @@
 	#endif
 #else 
 	#error Pixel Forge Only supports windows
-#endif //  GE_PLATFORM_WINDOWS
+#endif
+
+#define BIT(x) (1 << x)
