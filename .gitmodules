@@ -1,0 +1,12 @@
+[submodule "PixelForge/vendor/spdlog/repo"]
+	path = PixelForge/vendor/spdlog/repo
+	url = https://github.com/gabime/spdlog.git
+[submodule "PixelForge/vendor/GLFW/repo"]
+	path = PixelForge/vendor/GLFW/repo
+	url = https://github.com/glfw/glfw.git
+[submodule "PixelForge/vendor/imgui/repo"]
+	path = PixelForge/vendor/imgui/repo
+	url = https://github.com/ocornut/imgui.git
+[submodule "PixelForge/vendor/glm/repo"]
+	path = PixelForge/vendor/glm/repo
+	url = https://github.com/g-truc/glm.git
