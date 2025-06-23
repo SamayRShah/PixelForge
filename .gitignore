@@ -1,0 +1,15 @@
+# directories
+**/bin/
+**/bin-int/
+
+# vs files
+.vs/
+**.sln
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user
+**.csproj
+/PixelForge/vendor/Glad/repo/include/glad/glad.h
+/PixelForge/vendor/Glad/repo/include/KHR/khrplatform.h
+/Sandbox/imgui.ini
+/PixelForge/vendor/Glad/repo/src/glad.c
