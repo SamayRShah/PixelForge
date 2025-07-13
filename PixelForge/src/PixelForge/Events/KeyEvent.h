@@ -2,20 +2,20 @@
 #include "Event.h"
 
 namespace PixelForge {
-	class  E_Key : public Event {
+	class  KeyEvent : public Event {
 	public:
 		inline int GetKeyCode() const { return m_KeyCode;  }
 		EVENT_CLASS_CATEGORY(EventCategoryKeyboard | EventCategoryInput)
 	protected:
-		E_Key(int keyCode)
+		KeyEvent(int keyCode)
 			: m_KeyCode(keyCode) {}
 		int m_KeyCode;
 	};
 
-	class  E_KeyTyped : public E_Key {
+	class  KeyTypedEvent : public KeyEvent {
 	public:
-		E_KeyTyped(int keycode)
-			: E_Key(keycode){ }
+		KeyTypedEvent(int keycode)
+			: KeyEvent(keycode), m_RepeatCount(0){ }
 
 		std::string ToString() const override {
 			std::stringstream ss;
@@ -28,10 +28,10 @@ namespace PixelForge {
 		int m_RepeatCount;
 	};
 
-	class  E_KeyDown : public E_Key {
+	class  KeyDownEvent : public KeyEvent {
 	public:
-		E_KeyDown(int keycode, int repeatCount)
-			: E_Key(keycode), m_RepeatCount(repeatCount) {}
+		KeyDownEvent(int keycode, int repeatCount)
+			: KeyEvent(keycode), m_RepeatCount(repeatCount) {}
 
 		inline int GetRepeatCount() const { return m_RepeatCount; }
 
@@ -46,10 +46,10 @@ namespace PixelForge {
 		int m_RepeatCount;
 	};
 
-	class  E_KeyUp : public E_Key {
+	class  KeyUpEvent : public KeyEvent {
 	public:
-		E_KeyUp(int keyCode)
-			:E_Key(keyCode) {}
+		KeyUpEvent(int keyCode)
+			:KeyEvent(keyCode) {}
 
 		std::string ToString() const override {
 			std::stringstream ss;

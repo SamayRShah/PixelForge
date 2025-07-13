@@ -1,7 +1,7 @@
 #pragma once
 #include "pfpch.h"
 
-#include "PixelForge/Core.h"
+#include "PixelForge/Core/Core.h"
 #include "PixelForge/Events/Event.h"
 
 namespace PixelForge {

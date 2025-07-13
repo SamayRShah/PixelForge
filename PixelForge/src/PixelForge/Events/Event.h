@@ -1,5 +1,5 @@
 #pragma once
-#include "PixelForge/Core.h"
+#include "PixelForge/Core/Core.h"
 #include <spdlog/formatter.h>
 
 namespace PixelForge{
@@ -9,7 +9,7 @@ namespace PixelForge{
         WindowClose, WindowResize, WindowFocus, WindowBlur, WindowMove,
         AppTick, AppUpdate, AppRender,
         KeyDown, KeyUp, KeyTyped,
-        MB_Down, MB_Up, MouseMove, MouseScroll
+        MouseButtonDown, MouseButtonUp, MouseMove, MouseScroll
     };
 
     enum EventCategory {
@@ -53,7 +53,7 @@ namespace PixelForge{
             : m_Event(event) {}
 
         template<typename T>
-        bool DispatchEvent(EventFn<T> func) {
+        bool Dispatch(EventFn<T> func) {
             if (m_Event.GetEventType() == T::GetStaticType()) {
                 m_Event.Handled = func(*(T*)&m_Event);
                 return true;

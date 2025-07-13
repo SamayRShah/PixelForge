@@ -2,9 +2,9 @@
 #include "Event.h"
 
 namespace PixelForge {
-	class  E_MouseMove : public Event {
+	class  MouseMoveEvent : public Event {
 	public:
-		E_MouseMove(float x, float y)
+		MouseMoveEvent(float x, float y)
 			:m_MouseX(x), m_MouseY(y){}
 
 		inline float GetXOffset() const { return  m_MouseX; }
@@ -23,9 +23,9 @@ namespace PixelForge {
 		float m_MouseX, m_MouseY;
 	};
 
-	class  E_MouseScroll : public Event {
+	class  MouseScrollEvent : public Event {
 	public:
-		E_MouseScroll(float x, float y)
+		MouseScrollEvent(float x, float y)
 			:m_XOffset(x), m_YOffset(y) {
 		}
 
@@ -45,20 +45,20 @@ namespace PixelForge {
 		float m_XOffset, m_YOffset;
 	};
 
-	class  E_MB : public Event {
+	class  MouseButtonEvent : public Event {
 	public:
 		inline int GetMouseButton() const { return m_Button; }
 		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryMouseButton)
 	protected:
-		E_MB(int button)
+		MouseButtonEvent(int button)
 			: m_Button(button){}
 		int m_Button;
 	};
 
-	class  E_MBDown : public E_MB {
+	class  MouseButtonDownEvent : public MouseButtonEvent {
 	public:
-		E_MBDown(int button)
-			:E_MB(button){}
+		MouseButtonDownEvent(int button)
+			:MouseButtonEvent(button){}
 
 		std::string ToString() const override {
 			std::stringstream ss;
@@ -66,13 +66,13 @@ namespace PixelForge {
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(MB_Down)
+		EVENT_CLASS_TYPE(MouseButtonDown)
 	};
 
-	class  E_MBUp : public E_MB {
+	class  MouseButtonUpEvent : public MouseButtonEvent {
 	public:
-		E_MBUp(int button)
-			:E_MB(button) {
+		MouseButtonUpEvent(int button)
+			:MouseButtonEvent(button) {
 		}
 
 		std::string ToString() const override {
@@ -81,6 +81,6 @@ namespace PixelForge {
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(MB_Up)
+		EVENT_CLASS_TYPE(MouseButtonUp)
 	};
 }

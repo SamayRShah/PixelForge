@@ -1,5 +1,5 @@
 #pragma once
-#include "PixelForge/Window.h"
+#include "PixelForge/Core/Window.h"
 #include "PixelForge/Renderer/GraphicsContext.h"
 
 #include <GLFW/glfw3.h>

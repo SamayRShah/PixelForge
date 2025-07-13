@@ -14,6 +14,7 @@ IncludeDir["GLFW"] = "PixelForge/vendor/GLFW/repo/include"
 IncludeDir["Glad"] = "PixelForge/vendor/Glad/repo/include"
 IncludeDir["imgui"] = "PixelForge/vendor/imgui/repo"
 IncludeDir["glm"] = "PixelForge/vendor/glm/repo"
+IncludeDir["stb_image"] = "PixelForge/vendor/stb_image"
 
 group "Dependencies"
 	include "PixelForge/vendor/GLFW"
@@ -38,7 +39,11 @@ project "PixelForge"
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
 
-		-- glm includes
+		-- stb_image ---------------------------
+		"%{prj.name}/vendor/stb_image/**.h",
+		"%{prj.name}/vendor/stb_image/**.cpp",
+
+		-- glm includes ------------------------
 		"%{prj.name}/vendor/glm/repo/glm/**.hpp",
 		"%{prj.name}/vendor/glm/repo/glm/**.inl",
 	}
@@ -49,7 +54,8 @@ project "PixelForge"
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.imgui}",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.stb_image}"
 	}
 
 	links {

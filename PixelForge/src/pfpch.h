@@ -8,11 +8,12 @@
 
 #include <sstream>
 #include <string>
+#include <array>
 #include <vector>
 #include <unordered_map>
 #include <unordered_set>
 
-#include "PixelForge/Log.h"
+#include "PixelForge/Core/Log.h"
 
 #ifdef PF_PLATFORM_WINDOWS
 	#include <Windows.h>

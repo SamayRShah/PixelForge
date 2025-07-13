@@ -1,5 +1,5 @@
 #pragma once
-#include "PixelForge/Input.h"
+#include "PixelForge/Core/Input.h"
 
 namespace PixelForge {
 	class WindowsInput : public Input {

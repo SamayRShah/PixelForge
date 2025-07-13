@@ -1,5 +1,5 @@
 #pragma once
-#include "PixelForge/Core.h"
+#include "PixelForge/Core/Core.h"
 
 namespace PixelForge {
 

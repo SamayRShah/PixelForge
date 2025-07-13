@@ -1,7 +1,7 @@
 #include "pfpch.h"
 #include "WindowsInput.h"
 
-#include "PixelForge/Application.h"
+#include "PixelForge/Core/Application.h"
 #include <GLFW/glfw3.h>
 
 namespace PixelForge {

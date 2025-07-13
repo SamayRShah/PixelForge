@@ -1,5 +1,6 @@
 #pragma once
-#include "PixelForge/Core.h"
+#include "PixelForge/Core/Core.h"
+#include "PixelForge/Core/Timestep.h"
 #include "PixelForge/Events/Event.h"
 
 namespace PixelForge {
@@ -10,7 +11,7 @@ namespace PixelForge {
 
 		virtual void OnAttatch() {}
 		virtual void OnDetatch() {}
-		virtual void OnUpdate() {}
+		virtual void OnUpdate(Timestep timestep) {}
 		virtual void OnImGuiRender() {}
 		virtual void OnEvent(Event& event) {}
 

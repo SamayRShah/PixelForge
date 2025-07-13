@@ -3,9 +3,9 @@
 #include "Event.h"
 
 namespace PixelForge {
-	class  E_WindowResize : public Event {
+	class  WindowResizeEvent : public Event {
 	public:
-		E_WindowResize(unsigned int width, unsigned int height)
+		WindowResizeEvent(unsigned int width, unsigned int height)
 			: m_Width(width), m_Height(height){}
 
 		inline unsigned int GetWidth() const { return m_Width; }
@@ -25,30 +25,30 @@ namespace PixelForge {
 	};
 
 
-	class  E_WindowClose : public Event {
+	class  WindowCloseEvent : public Event {
 	public:
-		E_WindowClose() {}
+		WindowCloseEvent() {}
 		EVENT_CLASS_TYPE(WindowClose)
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
-	class  E_AppTick : public Event {
+	class  AppTickEvent : public Event {
 	public:
-		E_AppTick() {}
+		AppTickEvent() {}
 		EVENT_CLASS_TYPE(AppTick)
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
-	class  E_AppUpdate : public Event {
+	class  AppUpdateEvent : public Event {
 	public:
-		E_AppUpdate() {}
+		AppUpdateEvent() {}
 		EVENT_CLASS_TYPE(AppUpdate)
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
-	class  E_AppRender : public Event {
+	class  AppRenderEvent : public Event {
 	public:
-		E_AppRender() {}
+		AppRenderEvent() {}
 		EVENT_CLASS_TYPE(AppRender)
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
